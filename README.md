@@ -1,3 +1,25 @@
+To run
+```sh
+go run fq.go -d pg d pg_control
+```
+
+Work in progress ...
+
+Note:
+The Postgress source code has (pg_control.h) the comment:
+```
+* This data is used to check for hardware-architecture compatibility of
+* the database and the backend executable.  We need not check endianness
+* explicitly, since the pg_control version will surely look wrong to a
+* machine of different endianness, but we do need to worry about MAXALIGN
+* and floating-point format.  (Note: storage layout nominally also
+* depends on SHORTALIGN and INTALIGN, but in practice these are the same
+* on all architectures of interest.)
+```
+So there is dependence on how the pg_control file is compiled
+
+
+-----
 # fq
 
 Tool, language and decoders for working with binary data.
