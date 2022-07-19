@@ -33,6 +33,7 @@ import (
 	_ "github.com/wader/fq/format/ogg"
 	_ "github.com/wader/fq/format/opus"
 	_ "github.com/wader/fq/format/pcap"
+	_ "github.com/wader/fq/format/pg"
 	_ "github.com/wader/fq/format/png"
 	_ "github.com/wader/fq/format/protobuf"
 	_ "github.com/wader/fq/format/raw"

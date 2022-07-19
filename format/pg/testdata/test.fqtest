@@ -1,0 +1,29 @@
+$ fq -d pg d pg_control
+      |00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f|0123456789abcdef|.{}: pg_control (pg)
+0x0000|27 90 9d 09 49 b3 d5 62                        |'...I..b        |  Database system identifier: 7121795512031612967
+0x0000|                        14 05 00 00            |        ....    |  pg_control version number: 1300
+0x0000|                                    2d e9 0b 0c|            -...|  Catalog version number: 202107181
+0x0010|06 00 00 00 00 00 00 00                        |........        |  Database cluster state: "DB_IN_PRODUCTION" (6)
+0x0010|                        4a b3 d5 62 00 00 00 00|        J..b....|  pg_control last modified: "2022-07-18 19:23:54 +0000 UTC" (1658172234)
+0x0020|90 ae 6f 01 00 00 00 00                        |..o.....        |  Latest checkpoint location: "0/16fae90" (24096400)
+      |                                               |                |  copy of last check point record{}:
+0x0020|                        90 ae 6f 01 00 00 00 00|        ..o.....|    Latest checkpoint's REDO location: "0/16fae90" (24096400)
+0x0030|01 00 00 00                                    |....            |    Latest checkpoint's TimeLineID: 1
+0x0030|            01 00 00 00                        |    ....        |    Latest checkpoint's PrevTimeLineID: 1
+0x0030|                        01 00 00 00 00 00 00 00|        ........|    Latest checkpoint's full_page_writes: "on" (1)
+0x0040|de 02 00 00 00 00 00 00                        |........        |    Latest checkpoint's NextXID: "0:734" (734)
+0x0040|                        be 35 00 00            |        .5..    |    Latest checkpoint's NextOID: 13758
+0x0040|                                    01 00 00 00|            ....|    Latest checkpoint's NextMultiXactId: 1
+0x0050|00 00 00 00                                    |....            |    Latest checkpoint's NextMultiOffset: 0
+0x0050|            d7 02 00 00                        |    ....        |    Latest checkpoint's oldestXID: 727
+0x0050|                        01 00 00 00            |        ....    |    Latest checkpoint's oldestXID's DB: 1
+0x0050|                                    01 00 00 00|            ....|    Latest checkpoint's oldestMultiXid: 1
+0x0060|01 00 00 00 00 00 00 00                        |........        |    Latest checkpoint's oldestMulti's DB: 1
+0x0060|                        49 b3 d5 62 00 00 00 00|        I..b....|    Time of latest checkpoint: "2022-07-18 19:23:53 +0000 UTC" (1658172233)
+0x0070|00 00 00 00 00 00 00 00                        |........        |    Latest checkpoint's oldestCommitTsXid: 0
+0x0070|                        00 00 00 00            |        ....    |    Latest checkpoint's newestCommitTsXid: 0
+0x0070|                                    00 00 00 00|            ....|    Latest checkpoint's oldestActiveXID: 0
+0x0080|e8 03 00 00 00 00 00 00                        |........        |  Fake LSN counter for unlogged rels: "0/3e8" (1000)
+0x0080|                        00 00 00 00 00 00 00 00|        ........|  Minimum recovery ending location: "0/0" (0)
+0x0090|00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|................|  unknown0: raw bits
+*     |until 0x1fff.7 (end) (8048)                    |                |

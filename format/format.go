@@ -93,6 +93,7 @@ const (
 	PROTOBUF_WIDEVINE   = "protobuf_widevine"
 	PSSH_PLAYREADY      = "pssh_playready"
 	RAW                 = "raw"
+	PG                  = "pg"
 	RTMP                = "rtmp"
 	SLL_PACKET          = "sll_packet"
 	SLL2_PACKET         = "sll2_packet"
