@@ -34,6 +34,17 @@ var full_page_writesMap = scalar.UToSymStr{
 	1: "on",
 }
 
+var backupEndRequired_writesMap = scalar.UToSymStr{
+	0: "no",
+	1: "yes",
+}
+
+var WalLevel_writesMap = scalar.UToSymStr{
+	0: "minimal",
+	1: "replica",
+	2: "logical",
+}
+
 var timestampMapper = scalar.Fn(func(s scalar.S) (scalar.S, error) {
 	ts, ok := s.Actual.(uint64)
 	if !ok {
@@ -89,7 +100,12 @@ func decodePg(d *decode.D, in any) any {
 	})
 	d.FieldU64LE("Fake LSN counter for unlogged rels", halfHexMapper)
 	d.FieldU64LE("Minimum recovery ending location", halfHexMapper)
-
+	d.FieldU64LE("Min recovery ending loc's timeline")
+	d.FieldU64LE("Backup start location", halfHexMapper)
+	d.FieldU64LE("Backup end location", halfHexMapper)
+	d.FieldU32LE("Latest checkpoint's oldestActiveXID")
+	d.FieldU32LE("End-of-backup record required", backupEndRequired_writesMap)
+	d.FieldU32LE("wal_level setting", WalLevel_writesMap)
 	//i, err := strconv.ParseInt("1658172234", 10, 64)
 	//if err != nil {
 	//	panic(err)

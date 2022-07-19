@@ -25,5 +25,11 @@ $ fq -d pg d pg_control
 0x0070|                                    00 00 00 00|            ....|    Latest checkpoint's oldestActiveXID: 0
 0x0080|e8 03 00 00 00 00 00 00                        |........        |  Fake LSN counter for unlogged rels: "0/3e8" (1000)
 0x0080|                        00 00 00 00 00 00 00 00|        ........|  Minimum recovery ending location: "0/0" (0)
+0x0090|00 00 00 00 00 00 00 00                        |........        |  Min recovery ending loc's timeline: 0
+0x0090|                        00 00 00 00 00 00 00 00|        ........|  Backup start location: "0/0" (0)
+0x00a0|00 00 00 00 00 00 00 00                        |........        |  Backup end location: "0/0" (0)
+0x00a0|                        00 00 00 00            |        ....    |  Latest checkpoint's oldestActiveXID: 0
+0x00a0|                                    01 00 00 00|            ....|  End-of-backup record required: "yes" (1)
+0x00b0|00 00 00 00                                    |....            |  wal_level setting: "minimal" (0)
 0x0090|00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|................|  unknown0: raw bits
 *     |until 0x1fff.7 (end) (8048)                    |                |
