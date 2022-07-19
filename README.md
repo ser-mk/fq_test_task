@@ -3,6 +3,10 @@ To run
 go run fq.go -d pg d pg_control
 ```
 
+Tested on
+```
+postgres (PostgreSQL) 14.4 (Debian 14.4-1.pgdg110+1)
+```
 Work in progress ...
 
 Note:
